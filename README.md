@@ -150,8 +150,7 @@ What are Bindings? Essentially they are Cantabile’s mechanisms for all kinds o
 Bindings are version-dependent: you don’t get them in Cantabile Lite; Cantabile Solo contains a subset of bindings (it allows you to control things via MIDI, but not automate via “events”); you’ll need Cantabile Performer for the full set of capabilities.
 
 You find your bindings in Cantabile’s “Bindings” tab:
-
-![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXcS3UfcUxTxAvjpqlkVMB9qXsXd6rusAs85OSLb4orENldcpjJ0zyzurn3g1BUNchUPFg15SPDPI7G7LAa9nliNNXuoBe2ASV095MqiCvFVhFXUUL6-gll38PvH8vPRs-W6D4zobOoOxxFilO3sM0lPVQ?key=UcKwCVsCJc5n58uU4zh9ZQ)
+![Bindings tab](Pictures\cantabile-bindings-tab.png)
 
 You can also go to this tab with the keyboard shortcut CTRL-D
 
