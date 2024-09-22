@@ -110,10 +110,31 @@ Overall, you’ll have to make your own decisions how to best set up your MIDI c
 
 ## 2 Navigating the user interface
 
-- Guide section
-- table view vs. routing diagrams
+To understand the user interface, there is a whole section in the user guide: [see here](https://www.cantabilesoftware.com/guides/mainWindowControls). But this can be a bit complex to read un-prepared - it is usually easier to first watch Brad's [first video](https://youtu.be/FvUL2rte-YY). By watching Brad operate Cantabile, you will get the idea of the key parts of the Cantabile window.
 
-## 3 Building simple songs
+As a beginner, your starting point should be the "Routing View" - the big area at the heart of Cantabile's window. This is where you insert plugins for instruments and effects and where you create Audio and MIDI connections between these plugins in order to send MIDI commands (key presses, controller moves) to your instruments and to send the resulting audio from your plugins through others (e.g. an equalizer or a reverb) and then on to the output ports.
+
+<< picture>>
+
+The main window has three view modes (at least in the full version; not all modes are available in the "smaller" versions). For now make sure that the "Routing" view is active
+
+<< picture>>
+
+### Table View vs. Wiring View
+
+There are two ways the routing window can be displayed: there is the "table view", which displays your song as a table of horizontal lines, with individual lines for every plugin in your setup and "folded-in" lines for all the connections between them (we call them "routes"). Routes can be shown by "expanding" the plugin line and hidden by "collapsing" the plugin line using the "+"/"-" button at the left.
+
+<< picture>>
+
+The "wiring" view is a more graphic view that may help you understand the flow of audio and MIDI in a setup better. But this also means that less information on the state of a plugin or a route is shown - you'll have to decide which view works better for you.
+
+<< picture>>
+
+There is a dedicated page in the Guides section explaining how to use the Wiring View - [see here](https://www.cantabilesoftware.com/guides/routingDiagrams).
+
+For the rest of this guide, however, we will use the Table view - some configurations are just easier to explain in this view.
+
+## 3 Building Songs
 
 The first stage of using Cantabile is building simple songs, which contain an instrument plugin and maybe one or two effects plugins to process the output. You can start out with an instrument and an effect you know well (maybe a nice reverb?) and connect them to make Audio and MIDI flow between them.
 
@@ -123,7 +144,9 @@ Now is the time to watch the second half of Brad’s [first video](https://youtu
 
 The relevant Guides sections are [Ports and Routes](https://www.cantabilesoftware.com/guides/portsAndRoutes) and [Working with Plugins](https://www.cantabilesoftware.com/guides/workingWithPlugins) - work your way through them and things will be pretty clear!
 
-Now start working with your favorite plugins and build your first own setups. Once you have created a setup that you like, you can save it - this is called a “song” in Cantabile. Usually, you create a song file for each of your songs (if you want to create specific sound configurations for every song), but there are also users who use just a few basic configurations that they use across a number of songs, e.g. “piano & strings”, “organ”. We’ll also call these “songs”, OK?
+Now start working with your favorite plugins and build your first own setups. Once you have created a setup that you like, you can save it - this is called a “song” in Cantabile. Usually, you create a "song file"" for each of the songs you play (if you want to create specific sound configurations for every song), but there are also users who use just a few basic configurations that they use across a number of songs, e.g. “piano & strings”, “organ”. We’ll also call these “songs”, OK?
+
+Now start constructing your own songs and get a feel for Cantabile - come back to this guide once you feel comfortable with this.
 
 ## 4 Creating layers and splits
 
