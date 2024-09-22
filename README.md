@@ -37,6 +37,7 @@ Cantabile is a pretty sophisticated piece of software, and it builds on some pri
 If you have some experience with recording and producing audio and using VST instruments in a DAW (digital audio workstation) on a PC, you should have sufficient experience to be fine with Cantabile as well.
 
 Some articles on fundamentals for absolute beginners:
+
 - [what is a VST](https://emastered.com/blog/what-is-a-vst)?
 - what are [VST plugins](https://www.samplesoundmusic.com/blogs/news/what-are-vst-plugins-a-beginner-s-introduction) and how do I use them?
 - [what is MIDI](https://nektartech.com/article/blog/all-you-need-to-know-about-midi/) and how to use it
@@ -104,7 +105,7 @@ Overall, you’ll have to make your own decisions how to best set up your MIDI c
 
 ### Virtual vs. physical ports - audio and MIDI
 
-> [!TODO]
+> **ToDo**
 > Explain the two-layered architecture of Cantabile and how to take advantage of it
 
 ## 2 Navigating the user interface
@@ -126,29 +127,25 @@ Now start working with your favorite plugins and build your first own setups. On
 
 ## 4 Creating layers and splits
 
-  > [!TODO]
+> **ToDo**
+> 
 > Give a quick overview on how to use routes and route properties to 
 
 ## 5 Working with instrument / effect presets
 
-  
-
 ## 6 Using song states to change configurations quickly
-
-  
 
 ## 7 Bindings
 
 What are Bindings? Essentially they are Cantabile’s mechanisms for all kinds of automation or remote control. They allow you to
 
 - control parameters of your plugins via your MIDI controller
-    
+
 - remote-control aspects of Cantabile via MIDI (e.g. go to next song state)
-    
+
 - Do things automatically when certain “events” happen in Cantabile (e.g. send MIDI to an external device when a song loads, or automatically setting the Leslie speed of your virtual Hammond when changing song states)
-    
+
 - and lots more…
-    
 
 Bindings are version-dependent: you don’t get them in Cantabile Lite; Cantabile Solo contains a subset of bindings (it allows you to control things via MIDI, but not automate via “events”); you’ll need Cantabile Performer for the full set of capabilities.
 
@@ -163,87 +160,68 @@ All bindings have a “source” and a “destination”. The source tells Canta
 Sources are generally three categories:
 
 - MIDI events that arrive from a MIDI port (notes, controllers, …)
-    
+
 - Parameter changes from VST plugins
-    
+
 - Events in Cantabile (song load, state load, etc)
-    
 
 Destinations are similar: you can
 
 - send MIDI to MIDI ports
-    
+
 - control VST plugin parameters
-    
+
 - initiate actions within Cantabile (go to specific songs in a setlist, change song or racks states, start media player playback, etc.)
-    
 
 Now that you are armed with this knowledge, it is the time to watch the [video on Bindings](https://youtu.be/Czc9PU7opSs) and read the [Bindings chapter of Brad’s user guides](https://www.cantabilesoftware.com/guides/bindings) - this will give you all the nitty-gritty detail on how to create and manage bindings. 
 
 One important aspect: when it comes to MIDI sources, you’ll have to learn about control changes (CC): since CC commands can be used both for “triggers” (like pressing a button) and for “controllers” (pots and sliders), Cantabile needs to know how to deal with them. Mostly, Cantabile will pre-select a useful option based on the destination you select, but it is essential to know some key options:
 
 - Controller - this captures the value of the controller (0..127) and translates it to the target. This way, you can e.g. use a slider on your MIDI controller to change the cutoff frequency of a filter. Or you may want to use the mod wheel (CC1) to control the Leslie speed of a Hammond plugin. You can customize the range and the “curve” of this control on the destination side of a binding
-    
+
 - Controller (Button) - this interprets the CC input as follows: when the CC value first crosses >=64, the binding recognizes this as an event (or a “trigger”). These triggers can now initiate actions on the destination side of a binding, like starting media player playback or changing to the next song state. Important: after triggering the event, this source waits for a CC value <64 before it can be triggered again. So this type of binding source will work for sliders and pots (it will trigger when they cross the 50% mark from low to high) and it will work for buttons that send e.g. 127 when you press them and 0 when you release them. But it will NOT work for buttons that only send MIDI when you press them - it will react exactly ONCE and then wait endlessly for the “release” signal that never comes… That’s why you’ll need the next option:
-    
+
 - Controller (No-Edge Button): This binding will “fire” on ANY CC value >= 64. As such, it is exactly the binding you need when you want to start actions by pressing a button that only sends values when pressed, but not when released. You definitely DON’T want to use this to trigger events with sliders, pots or wheels: this will create a ton of triggers once the slider is above the threshold. 
-    
 
 A final note: bindings can exist at multiple levels: 
 
 - you will probably use bindings at song level first - to use MIDI controllers or song states to control your plugins or to automate things
-    
+
 - racks (next chapter) can also have bindings embedded. This can be very helpful to do things inside a rack based on input that rack receives through its MIDI input. But bindings can also be used e.g. to initialize parameters within a rack whenever a song is loaded
-    
+
 - if you have certain bindings that aren’t song-specific (e.g. if you have buttons that you want to use to step forward/backward between songs), there is a special place for them: the Background Rack. We’ll also get to that in the next chapter.
-    
 
 ## 8 Racks
-
-  
-  
 
 ### The Background Rack
 
 ## 9 Setlists
 
-  
-
 ## 10 Pre-loading
 
-  
-
 ## 11 Media Players
-
-  
 
 # Advanced topics
 
 ## 1 Using the Controller Bar
-
-  
 
 ## 2 MIDI tempo and synchronization
 
 ## 3 Processing audio input
 
 - e.g. playing guitar through Cantabile
-    
+
 - using audio inputs - need for ASIO drivers
-    
+
 - respecting round-trip latency
-    
 
 ## 4 Cantabile for streaming and conferencing
 
 - relevant videos on voicemeeter by Terry Britton
-    
 
 ## 5 Using Show Notes
 
 ## 6 Multiple configurations
-
-  
 
 # When asking for help in the forum
 
@@ -252,17 +230,13 @@ Following this guide, you should have a good knowledge of the relevant aspects o
 There is a bunch of really knowledgeable and experienced people out there, who are usually very friendly and helpful, but there’s a couple of things to keep in mind when asking questions in the forum:
 
 - be polite and friendly - no ranting, swearing or personal insults, and NO SHOUTING, PLEASE
-    
-- search first - a lot of questions can be addressed by finding answers already given in the forum
-    
-- be as specific as possible - use screenshots to illustrate your specific use case and give as much detail on your configuration as may be useful for others to understand. “I’m not getting any sound” is not really helpful for others to diagnose the problem…
-    
-- The universal language on the forum is English - don’t worry if your native language isn’t English; there are people from all over the world here, so nobody is going to flame you on grammar or syntax. There are also tools like Google Translate or DeepL that can help you create your posts in English or translate English posts to your native language. If you post in another language, you will drastically limit the number of people who can help you.
-    
-- The same applies to screenshots: it will be difficult for others in the forum to understand your specific problem if you are using a localized version of Cantabile to create your screenshots. It may be a good idea to keep Cantabile set to English if you plan to interact with the forum on a regular basis.
-    
-- please keep in mind that people on the forum are helping you on a voluntary user-to-user basis - you have no claim on their time and energy, so be respectful of that
-    
 
-  
-**
+- search first - a lot of questions can be addressed by finding answers already given in the forum
+
+- be as specific as possible - use screenshots to illustrate your specific use case and give as much detail on your configuration as may be useful for others to understand. “I’m not getting any sound” is not really helpful for others to diagnose the problem…
+
+- The universal language on the forum is English - don’t worry if your native language isn’t English; there are people from all over the world here, so nobody is going to flame you on grammar or syntax. There are also tools like Google Translate or DeepL that can help you create your posts in English or translate English posts to your native language. If you post in another language, you will drastically limit the number of people who can help you.
+
+- The same applies to screenshots: it will be difficult for others in the forum to understand your specific problem if you are using a localized version of Cantabile to create your screenshots. It may be a good idea to keep Cantabile set to English if you plan to interact with the forum on a regular basis.
+
+- please keep in mind that people on the forum are helping you on a voluntary user-to-user basis - you have no claim on their time and energy, so be respectful of that
