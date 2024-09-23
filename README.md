@@ -26,27 +26,27 @@ I have invited other experienced users to contribute to this article. All contri
 
 4. [The Cantabile Fundamentals](#the-cantabile-fundamentals)
    
-   1. [Basic setup](#basic-setup)
+   1. [Basic setup](#1-basic-setup)
    
-   2. [Navigating the user interface](#navigating-the-user-interface)
+   2. [Navigating the user interface](#2-navigating-the-user-interface)
    
-   3. [Building Songs](#building-songs)
+   3. [Building Songs](#3-building-songs)
    
-   4. [Creating Layers and Splits](#creating-layers-and-splits)
+   4. [Creating Layers and Splits](#4-creating-layers-and-splits)
    
-   5. [Working with instrument / effect presets](#working-with-instrument--effect-presets)
+   5. [Working with instrument / effect presets](#5-working-with-instrument--effect-presets)
    
-   6. [Using song states to change configurations quickly](#using-song-states-to-change-configurations-quickly)
+   6. [Using song states to change configurations quickly](#6-using-song-states-to-change-configurations-quickly)
    
-   7. [Bindings](#bindings)
+   7. [Bindings](#7-bindings)
    
-   8. [Racks](#racks)
+   8. [Racks](#8-racks)
    
-   9. [Setlists](#setlists)
+   9. [Setlists](#9-setlists)
    
-   10. [Pre-loading](#pre-loading)
+   10. [Pre-loading](#10-pre-loading)
    
-   11. [Media Players](#media-players)
+   11. [Media Players](#11-media-players)
 
 5. [Advanced Topics](#advanced-topics)
 
