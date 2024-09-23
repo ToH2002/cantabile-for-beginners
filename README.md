@@ -12,7 +12,7 @@ There are a number of topics that are frequently asked by new users of Cantabile
 
 This will by no means be the tell-all-and-end-all manual for Cantabile, but once you work your way through this guide, you should be able to get going, using Cantabile for most of the usual scenarios, and also have the knowledge to find your own way, building on that to get to the more sophisticated things with the available resources.
 
-This document has been created on the basis of my learnings getting started and more experienced with Cantabile over the years, and prioritized by the topics of the questions I frequently read in the [Cantabile forum](https://community.cantabilesoftware.com/). 
+This document has been created on the basis of my learnings getting started and more experienced with Cantabile over the years, and prioritized by the topics of the questions I frequently read in the [Cantabile forum](https://community.cantabilesoftware.com/){:target="_blank"}. 
 
 I have invited other experienced users to contribute to this article. All contributors will be credited explicitly here - thanx in advance for your help!
 
