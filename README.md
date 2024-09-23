@@ -4,11 +4,17 @@
 
 Hello and welcome to the Cantabile community!
 
-Cantabile is a powerful tool for performing music with software instruments and effects, and there is a very active group of people here who use it during live performances and are happy to help new users getting to grips with Cantabile. 
+[Cantabile](https://www.cantabilesoftware.com/) is a powerful tool for performing music with software instruments and effects, and there is a very active group of people here who use it during live performances and are happy to help new users getting to grips with Cantabile. 
 
 While Cantabile is very powerful, it is also a complex piece of software - learning Cantabile is a bit like learning an instrument. You’ll have to learn some foundations before you can really use Cantabile for your specific application. You will have to invest some time and be serious about understanding how it all works - Cantabile is not a simple “click-and-play” solution.
 
-We (a group of experienced Cantabile users) have created this guide to help you with your learning journey - once you work your way through this guide, you should be able to use Cantabile for most of the usual scenarios and build on that to get to the more sophisticated things.
+There are a number of topics that are frequently asked by new users of Cantabile in the [Cantabile forum]([https://community.cantabilesoftware.com/](https://community.cantabilesoftware.com/)); to avoid having to answer these questions all over again for every new user, this is an attempt to create a first foundation of knowledge that will enable you to take your first steps with Cantabile, and also to have a common basis of reference when you come to the forum to ask your question.
+
+This will by no means be the tell-all-and-end-all manual for Cantabile, but once you work your way through this guide, you should be able to get going, using Cantabile for most of the usual scenarios, and also have the knowledge to find your own way, building on that to get to the more sophisticated things with the available resources.
+
+This document has been created on the basis of my learnings getting started and more experienced with Cantabile over the years, and prioritized by the topics of the questions I frequently read in the [Cantabile forum](https://community.cantabilesoftware.com/). 
+
+I have invited other experienced users to contribute to this article. All contributors will be credited explicitly here - thanx in advance for your help!
 
 # What Cantabile does
 
@@ -22,9 +28,9 @@ While there are also other use cases of Cantabile (e.g. using Cantabile as a “
 
 # What you need
 
-- reasonably powerful PC → link to PC specs  
-- usually audio interface and a way to hear the output (speakers or headphones)
-- normally: MIDI controller keyboard or synthesizer (more on special cases later)
+- areasonably powerful PC → there are multiple discussions on the forum about reasonable PC (or laptop) specifications; best use the search function for this  
+- an audio interface and a way to hear its output (speakers or headphones). It is typically not advisable to use the on-board audio devices of laptops or PCs for live VST use, both from a sound quality and from a latency perspective (more on latency later)
+- a MIDI controller keyboard or synthesizer (more on special cases later). There are different ways to connect this keyboard to your PC - directly via USB or through a dedicated MIDI interface and special "DIN MIDI cables". More on this later as well.
 
 # What you should know before starting
 
@@ -61,7 +67,7 @@ Before starting to build your songs, you’ll have to install and configure Cant
 
 Here are the relevant guides sections: [Installation](https://www.cantabilesoftware.com/guides/installation), [Getting Started](https://www.cantabilesoftware.com/guides/gettingStarted).
 
-Expert tip: Do yourself a favor at this time and do NOT use “hardware” names for your audio or MIDI ports (e.g. “Scarlett 2i2”, “M-Audio Oxygen”), but rather stay with “logical” names like “Main Keyboard”, “Upper Keyboard”, “Main Output”, “Monitor Output” and the like. You may want to change your hardware in a year or two without having to re-work all your Cantabile songs…
+Expert tip: Do yourself a favor at this time and do NOT use “hardware” names for your audio or MIDI ports (e.g. “Scarlett 2i2”, “M-Audio Oxygen”), but rather stay with “logical” names like “Main Keyboard”, “Upper Keyboard”, “Main Output”, “Monitor Output” and the like. You may want to change your hardware in a year or two without having to re-work all your Cantabile songs… More on this later in a dedicated section.
 
 ### Latency and audio drivers
 
@@ -160,6 +166,12 @@ Now is the time to watch the second half of Brad’s [first video](https://youtu
 The relevant Guides sections are [Ports and Routes](https://www.cantabilesoftware.com/guides/portsAndRoutes) and [Working with Plugins](https://www.cantabilesoftware.com/guides/workingWithPlugins) - work your way through them and things will be pretty clear!
 
 Now start working with your favorite plugins and build your first own setups. Once you have created a setup that you like, you can save it - this is called a “song” in Cantabile. Usually, you create a "song file"" for each of the songs you play (if you want to create specific sound configurations for every song), but there are also users who use just a few basic configurations that they use across a number of songs, e.g. “piano & strings”, “organ”. We’ll also call these “songs”, OK?
+
+Here is an example of a very basic song: MIDI input from your keyboard routed to an instrument plugin (in this case a DX7 emulation called "Dexed"), creating audio output from Dexed. This audio output is then routed through an effect plugin (a reverb from the kiloHertz bundle) where it gets some reverb added to it. The result of this is then sent out to the output port so you can hear it.
+
+![](Pictures/basic-song.png)
+
+This is just a simple linear effects chain, with a single "line" from MIDI input to audio output. But songs can become far more complex - any input port or plugin output can be sent to multiple destinations by just adding more routes. Also multiple routes can be sent to one single destination; Cantabile will take care of the mixing automatically when you e.g. send multiple plugin outputs to "Main Speakers" - there is no need for an explicit "Mixer Block" to mix the signals together; Cantabile will do that for you. The same applies for MIDI routes: Cantabile will automatically merge the MIDI data from multiple routes at their destination, so you can route MIDI from multiple keyboards or controllers to the same plugin.
 
 Now start constructing your own songs and get a feel for Cantabile - come back to this guide once you feel comfortable with this.
 
