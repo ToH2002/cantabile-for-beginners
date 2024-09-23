@@ -135,21 +135,21 @@ To understand the user interface, there is a whole section in the user guide: [s
 
 As a beginner, your starting point should be the "Routing View" - the big area at the heart of Cantabile's window. This is where you insert plugins for instruments and effects and where you create Audio and MIDI connections between these plugins in order to send MIDI commands (key presses, controller moves) to your instruments and to send the resulting audio from your plugins through others (e.g. an equalizer or a reverb) and then on to the output ports.
 
-<< picture>>
+![](Pictures/main-window.png)
 
 The main window has three view modes (at least in the full version; not all modes are available in the "smaller" versions). For now make sure that the "Routing" view is active
 
-<< picture>>
+![](Pictures/routing-view.png)
 
 ### Table View vs. Wiring View
 
 There are two ways the routing window can be displayed: there is the "table view", which displays your song as a table of horizontal lines, with individual lines for every plugin in your setup and "folded-in" lines for all the connections between them (we call them "routes"). Routes can be shown by "expanding" the plugin line and hidden by "collapsing" the plugin line using the "+"/"-" button at the left.
 
-<< picture>>
+![](Pictures/basic-song.png)
 
 The "wiring" view is a more graphic view that may help you understand the flow of audio and MIDI in a setup better. But this also means that less information on the state of a plugin or a route is shown - you'll have to decide which view works better for you.
 
-<< picture>>
+![](Pictures/wiring-view.png)
 
 There is a dedicated page in the Guides section explaining how to use the Wiring View - [see here](https://www.cantabilesoftware.com/guides/routingDiagrams).
 
