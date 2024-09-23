@@ -105,8 +105,23 @@ Overall, you’ll have to make your own decisions how to best set up your MIDI c
 
 ### Virtual vs. physical ports - audio and MIDI
 
-> **ToDo**
-> Explain the two-layered architecture of Cantabile and how to take advantage of it
+One thing that frequently trips up new Cantabile users and also comes back to haunt them years later is the logic around its audio and MIDI ports. 
+
+Cantabile addresses audio and MIDI hardware at two levels: 
+
+- a higher "abstract" level of "logical" input / output ports that get used with Cantabile's songs
+
+- a lower "physical" level of the technical devices that are actually connected to your PC and that you typically see in your system configuration. These "physical"" devices need to be assigned to your "logical" devices so that you can actually use this
+
+This sounds convoluted at first, but the advantage of this two-layered logic is that you can create your songs based on the _function_ of an input/output port and not based on the _technical device_ attached to your PC. If you want to use your Cantabile songs on a different PC with different hardware, all you need to do is install Cantabile on that PC, re-create your logical ports, assign the hardware ports to your logical ports, and all your songs will work nicely.
+
+Also, when you change any part of your hardware setup in a few years (once G.A.S. hits again), you simply change the assignment of hardware ports to logical ports and you won't have to change anything in your ports.
+
+So there is one iron principle (ignore it at your peril!): **use functional names instead of technical names for your audio and MIDI ports**
+
+- "Main Keyboard", "Second Keyboard", "DrumPad" instead of "Motif XF 6", "Keystation 49", "nanoPAD2"
+
+- "Organ Out", "Piano Out", "Monitor Out", ... instead of "Babyface 1/2", "Scarlett 2i2 1/2" etc
 
 ## 2 Navigating the user interface
 
@@ -150,9 +165,43 @@ Now start constructing your own songs and get a feel for Cantabile - come back t
 
 ## 4 Creating layers and splits
 
-> **ToDo**
-> 
-> Give a quick overview on how to use routes and route properties to 
+Where Cantabile excels is creating layers and zones from multiple instruments - you can go absolutely wild stacking and mixing multiple sounds for that monumental sound or creating as many split zones (overlapping if need be) as your keyboard has keys.
+
+### Layering
+
+To layer the sound of two plugins, simply create TWO routes from your MIDI input (let's say: Main Keyboard) and connect them to two different plugins (that are both routed to your output). Now, when you play a key, this note will be sent to both plugins. Cantabile will automatically mix the output from both plugins; no need to worry about this. To change the mix between the sounds, simply adjust the Gain for the individual plugins. 
+
+To layer even more, simply add more routes and more plugins...
+
+You may want to transpose individual layers (e.g. to get these high silvery strings over your piano). Of course you can transpose the sound your plugin makes, but the easiest way to do this is simply transpose the MIDI notes sent to your plugin. 
+
+The key to this are the properties of your routes - when you right-click any MIDI route and select "MIDI Route Properties..." (or you click the "Control" column of the route line; the part that initially says "Omni"), you get to a big settings page that allows you to make all kinds of settings to filter and modify the MIDI notes getting forwarded to your plugin:
+
+<< picture>>
+
+Use the "Transpose" setting to change the MIDI notes sent to your layer - the Transpose setting is displayed in the format "octaves.semitones", so transposing all notes up by an octave means "1.0".
+
+### Keyboard Splits / Zones
+
+For this, start as with layers and create your routes from your keyboard to multiple plugins, then use the Midi Route Properties, now with the "Note Range": by using the "Lowest Note" and "Highest Note" Boxes, you can filter the range of notes that will be sent to your plugin. So if you select 60 to 72 here, only the notes of the octave starting with "middle C" will be sent to that specific plugin. So you have created a 1-octave zone that is sent to this one plugin. 
+
+Make similar settings for your routes to your other instruments, and you've created multiple keyboard zones. These can be fully separated or overlap - this is all determined by the key ranges you set for your routes.
+
+With splits and zones, it will often be necessary to transpose some of your zones (maybe that top octave you only use for a quick brass phrase). Use the Transpose setting in the MIDI Route Properties for that.
+
+More details on the MIDI Route Properties: see the [guide for this topic](https://www.cantabilesoftware.com/guides/midiRoutes).
+
+### Advanced Layering Techniques
+
+If you want to create a "**velocity layer**", with individual instruments only playing for a certain velocity range (e.g. add a crash cymbal on very hard hits of a bass sound), you'll need to use MIDI filters on that route. 
+
+*Note: This is a feature that requires at least Cantabile Solo.*
+
+To create a velocity filter on a route, click the "funnel" icon on the MIDI route - this will show you the MIDI filter page. Here, insert a "Velocity Gate" filter and set it to focus on the range of velocities that you want to play this instrument on. Select "Suppress out of range notes" so that all other notes don't play, and you're done.
+
+See the [Filters Section](https://www.cantabilesoftware.com/guides/midiFilters) of the Guides for more details.
+
+Another useful technique is to **layer an instrument with itself** - simply create two or more transposed routes to the same instrument. Easily create octaved brass phrases or instant chords using this technique.
 
 ## 5 Working with instrument / effect presets
 
