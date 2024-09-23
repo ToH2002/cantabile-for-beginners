@@ -34,7 +34,7 @@ I have invited other experienced users to contribute to this article. All contri
    
    4. [Creating Layers and Splits](#creating-layers-and-splits)
    
-   5. [Working with instrument / effect presets](#working-with-instrument-effect-presets)
+   5. [Working with instrument / effect presets](#working-with-instrument--effect-presets)
    
    6. [Using song states to change configurations quickly](#using-song-states-to-change-configurations-quickly)
    
