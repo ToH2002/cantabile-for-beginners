@@ -24,6 +24,34 @@ I have invited other experienced users to contribute to this article. All contri
 
 3. [What you should know before starting](#what-you-should-know-before-starting)
 
+4. [The Cantabile Fundamentals](#the-cantabile-fundamentals)
+   
+   1. [Basic setup](#basic-setup)
+   
+   2. [Navigating the user interface](#navigating-the-user-interface)
+   
+   3. [Building Songs](#building-songs)
+   
+   4. [Creating Layers and Splits](#creating-layers-and-splits)
+   
+   5. [Working with instrument / effect presets](#working-with-instrument-effect-presets)
+   
+   6. [Using song states to change configurations quickly](#using-song-states-to-change-configurations-quickly)
+   
+   7. [Bindings](#bindings)
+   
+   8. [Racks](#racks)
+   
+   9. [Setlists](#setlists)
+   
+   10. [Pre-loading](#pre-loading)
+   
+   11. [Media Players](#media-players)
+
+5. [Advanced Topics](#advanced-topics)
+
+6. [When asking for help in the Forum](#when-asking-for-help-in-the-forum)
+
 # What Cantabile does
 
 Cantabile is a “VST host” - what does this mean? Essentially, Cantabile is a piece of software that allows you to “play” VST plugins in a live context. VST plugins are typically used in DAWs (digital audio workstations - essentially music production software), and they come as “instruments”, which generate sounds (e.g. a piano), and “effects” which process sound passing through them (e.g. an equalizer). VST plugins can’t run on their own - they need a “host” that they plug into - usually, this is a DAW. Cantabile is a special kind of host to allow you to play these plugins live instead of using them in a recording and production context. You “play” these instruments by sending MIDI signals to Cantabile from an external controller keyboard and letting Cantabile create and process the sounds.
@@ -36,7 +64,7 @@ While there are also other use cases of Cantabile (e.g. using Cantabile as a “
 
 # What you need
 
-- areasonably powerful PC → there are multiple discussions on the forum about reasonable PC (or laptop) specifications; best use the search function for this  
+- a reasonably powerful PC → there are multiple discussions on the forum about reasonable PC (or laptop) specifications; best use the search function for this  
 - an audio interface and a way to hear its output (speakers or headphones). It is typically not advisable to use the on-board audio devices of laptops or PCs for live VST use, both from a sound quality and from a latency perspective (more on latency later)
 - a MIDI controller keyboard or synthesizer (more on special cases later). There are different ways to connect this keyboard to your PC - directly via USB or through a dedicated MIDI interface and special "DIN MIDI cables". More on this later as well.
 
