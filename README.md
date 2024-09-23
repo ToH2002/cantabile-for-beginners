@@ -16,7 +16,17 @@ This document has been created on the basis of my learnings getting started and 
 
 I have invited other experienced users to contribute to this article. All contributors will be credited explicitly here - thanx in advance for your help!
 
-# What Cantabile does
+# Table Of Contents
+
+1. [What Cantabile does](#what-cantabile-does)
+
+2. [What you need]()
+
+3. [What you should know before starting](#what-you-should-know-before-starting)
+
+4. 
+
+# What Cantabile does <a name="what-cantabile-does"></a>
 
 Cantabile is a “VST host” - what does this mean? Essentially, Cantabile is a piece of software that allows you to “play” VST plugins in a live context. VST plugins are typically used in DAWs (digital audio workstations - essentially music production software), and they come as “instruments”, which generate sounds (e.g. a piano), and “effects” which process sound passing through them (e.g. an equalizer). VST plugins can’t run on their own - they need a “host” that they plug into - usually, this is a DAW. Cantabile is a special kind of host to allow you to play these plugins live instead of using them in a recording and production context. You “play” these instruments by sending MIDI signals to Cantabile from an external controller keyboard and letting Cantabile create and process the sounds.
 
